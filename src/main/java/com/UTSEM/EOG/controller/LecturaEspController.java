@@ -42,6 +42,12 @@ public class LecturaEspController {
 	}
 
 	
+	@PostMapping("/actualizar")
+	public String actualizar(@RequestBody LecturaESPdto esPdto) {
+		return lecturaEspService.actualizar(esPdto);
+	}
+	
+	
 	
 
 }
