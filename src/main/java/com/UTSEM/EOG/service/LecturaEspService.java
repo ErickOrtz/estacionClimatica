@@ -20,7 +20,7 @@ public class LecturaEspService {
 	public String guardarLectura(@RequestBody LecturaESPdto lecturaESPdto) {
 	    LecturaESP lecturaESPaGuardar = new LecturaESP();
 	    
-	   
+	    System.out.println("LugarEstacion recibido: " + lecturaESPdto.getLugarEstacion());
 	    if(lecturaESPdto.getFechaHoraLectura() == null) {
 	        lecturaESPdto.setFechaHoraLectura(LocalDateTime.now());
 	    }
@@ -34,7 +34,7 @@ public class LecturaEspService {
 	    
 	    System.out.println(lecturaESPdto.resumenLectura());
 	    
-	    lecturaEspRrepsitory.save(lecturaESPaGuardar);
+	    //lecturaEspRrepsitory.save(lecturaESPaGuardar);
 	    return lecturaESPdto.resumenLectura();
 	}
 	
