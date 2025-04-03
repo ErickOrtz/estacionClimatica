@@ -50,8 +50,10 @@ public class LecturaEspService {
 			lectuarActualizr.setSensorHumedad(lecturaESP.getSensorHumedad());
 			lectuarActualizr.setSensorLLuvia(lecturaESP.getSensorLLuvia());
 			lectuarActualizr.setSensorTemperatura(lecturaESP.getSensorTemperatura());
+			
 			lecturaEspRrepsitory.save(lectuarActualizr);
-			return "lectura actualizada correctamente";
+			
+			return lecturaESP.resumenLectura();
 		}
 		return "Lectura No encontrada";
 		
