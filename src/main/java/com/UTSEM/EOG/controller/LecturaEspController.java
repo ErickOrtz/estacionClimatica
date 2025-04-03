@@ -29,12 +29,12 @@ public class LecturaEspController {
 		return "API funcionando correctamente";
 	}
 
-	/*@PostMapping("/guardarLectura")
+	@PostMapping("/guardarLectura")
 	public String guardarLecturaESP32(@RequestBody LecturaESPdto lecturaESPdto) {
 
 		return lecturaEspService.guardarLectura(lecturaESPdto);
 
-	}*/
+	}
 	
 	@GetMapping("/obtenerLecturas")
 	public List<LecturaESP> obtenerLecturas() {
