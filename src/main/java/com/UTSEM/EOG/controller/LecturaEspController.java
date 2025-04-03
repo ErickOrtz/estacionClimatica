@@ -41,6 +41,14 @@ public class LecturaEspController {
 		return lecturaEspService.obtenerLecturas();
 	}
 	
+	@PostMapping("/consultarLecturas")
+	public String consultarLecturasSinGuardar(@RequestBody LecturaESPdto lecturaESPdto) {
+		//TODO: process POST request
+		
+		return lecturaEspService.MostrarLecturaSinGuardar(lecturaESPdto);
+	}
+	
+	
 	
 
 }
