@@ -17,7 +17,7 @@ public class LecturaEspService {
 
 	@Autowired
 	LecturaEspRrepsitory lecturaEspRrepsitory;
-	
+	/*
 	public String guardarLectura(@RequestBody LecturaESPdto lecturaESPdto) {
 	    LecturaESP lecturaESPaGuardar = new LecturaESP();
 	    
@@ -38,7 +38,7 @@ public class LecturaEspService {
 	    lecturaEspRrepsitory.save(lecturaESPaGuardar);
 	    return lecturaESPdto.resumenLectura();
 	}
-	
+	*/
 	public String actualizar(LecturaESPdto lecturaESP) {
 		
 		Optional<LecturaESP> laLectura = lecturaEspRrepsitory.findById(lecturaESP.getId());
