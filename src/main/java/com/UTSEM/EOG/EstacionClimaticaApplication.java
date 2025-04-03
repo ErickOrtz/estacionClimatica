@@ -21,10 +21,9 @@ public class EstacionClimaticaApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://joyful-radiance-production.up.railway.app")  // Solo tu dominio Railway
-                        .allowedMethods("GET", "POST", "PUT", "DELETE")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);  // Si usas cookies o auth
+                        .allowedOrigins("*")  // Permite todas las IPs y dominios
+                        .allowedMethods("*")
+                        .allowedHeaders("*");
             }
         };
     }
