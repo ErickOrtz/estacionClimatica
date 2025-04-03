@@ -21,9 +21,11 @@ public class EstacionClimaticaApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*")  // Permite todas las IPs y dominios
-                        .allowedMethods("*")
-                        .allowedHeaders("*");
+                        .allowedOrigins("*")  // O especifica dominios: "https://tudominio.com"
+                        .allowedMethods("GET", "POST", "PUT", "DELETE")
+                        .allowedHeaders("Authorization", "Content-Type")
+                        .exposedHeaders("Custom-Header")  // Si necesitas exponer headers.
+                        .maxAge(3600);  // Tiempo de cache para opciones CORS.
             }
         };
     }
