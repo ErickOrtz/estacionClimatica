@@ -9,14 +9,14 @@ public class LecturaESPdto {
 	Float sensorTemperatura;
 	LocalDateTime fechaHoraLectura;
 	Float sensorHumedad;
-	String LugarEstacion;
+	String lugarEstacion;
 	
 	public String getLugarEstacion() {
-		return LugarEstacion;
+		return lugarEstacion;
 	}
 
 	public void setLugarEstacion(String lugarEstacion) {
-		this.LugarEstacion = lugarEstacion;
+		this.lugarEstacion = lugarEstacion;
 	}
 
 	public String resumenLectura() {
@@ -25,7 +25,7 @@ public class LecturaESPdto {
 				+ "sensorTemperatura: "+this.sensorTemperatura
 				+ "\nsensorHumedad: "+this.sensorHumedad+"\n"
 				+ "fechaHoraLectura: "+this.fechaHoraLectura
-				+"\nLugar de la Estacion: "+ this.LugarEstacion;
+				+"\nLugar de la Estacion: "+ this.lugarEstacion;
 	}
 	
 	public Float getSensorHumedad() {

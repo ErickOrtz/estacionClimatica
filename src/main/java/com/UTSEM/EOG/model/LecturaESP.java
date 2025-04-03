@@ -27,7 +27,7 @@ public class LecturaESP {
 	@Column
 	Float sensorHumedad;
 	@Column
-	String LugarEstacion;
+	String lugarEstacion;
 	@Column
 	@CreationTimestamp
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
@@ -36,10 +36,10 @@ public class LecturaESP {
 	///////////////////////
 	
 	public String getLugarEstacion() {
-		return LugarEstacion;
+		return lugarEstacion;
 	}
-	public void setLugarEstacion(String lugarEstacion) {
-		LugarEstacion = lugarEstacion;
+	public void setLugarEstacion(String lugarEstacionn) {
+		lugarEstacion = lugarEstacionn;
 	}
 	public Long getId() {
 		return id;
