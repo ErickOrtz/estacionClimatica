@@ -25,7 +25,7 @@ public class LecturaEspService {
 	        lecturaESPdto.setFechaHoraLectura(LocalDateTime.now());
 	    }
 	  
-	    lecturaESPaGuardar.setFechaHoraLectura(lecturaESPdto.getFechaHoraLectura());
+	    //lecturaESPaGuardar.setFechaHoraLectura(lecturaESPdto.getFechaHoraLectura());
 	    lecturaESPaGuardar.setSensorCO(lecturaESPdto.getSensorCO());
 	    lecturaESPaGuardar.setSensorHumedad(lecturaESPdto.getSensorHumedad());
 	    lecturaESPaGuardar.setSensorLLuvia(lecturaESPdto.getSensorLLuvia());
