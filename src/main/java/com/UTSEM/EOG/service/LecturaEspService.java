@@ -26,6 +26,7 @@ public class LecturaEspService {
 		lecturaESPaGuardar.setSensorHumedad(lecturaESPdto.getSensorHumedad());
 		lecturaESPaGuardar.setSensorLLuvia(lecturaESPdto.getSensorLLuvia());
 		lecturaESPaGuardar.setSensorTemperatura(lecturaESPdto.getSensorTemperatura());
+		lecturaESPaGuardar.setLugarEstacion(lecturaESPdto.getLugarEstacion());
 		lecturaESPdto.setFechaHoraLectura(LocalDateTime.now());
 		System.out.println(lecturaESPdto.resumenLectura());
 		

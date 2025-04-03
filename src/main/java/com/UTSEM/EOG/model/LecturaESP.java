@@ -35,6 +35,12 @@ public class LecturaESP {
 	
 	///////////////////////
 	
+	public String getLugarEstacion() {
+		return LugarEstacion;
+	}
+	public void setLugarEstacion(String lugarEstacion) {
+		LugarEstacion = lugarEstacion;
+	}
 	public Long getId() {
 		return id;
 	}
