@@ -20,12 +20,11 @@ public class LecturaEspService {
 	public String guardarLectura(@RequestBody LecturaESPdto lecturaESPdto) {
 	    LecturaESP lecturaESPaGuardar = new LecturaESP();
 	    
-	    // Establecer la fecha actual solo si no viene en el DTO
+	   
 	    if(lecturaESPdto.getFechaHoraLectura() == null) {
 	        lecturaESPdto.setFechaHoraLectura(LocalDateTime.now());
 	    }
-	    
-	    // Copiar todos los campos del DTO a la entidad
+	  
 	    lecturaESPaGuardar.setFechaHoraLectura(lecturaESPdto.getFechaHoraLectura());
 	    lecturaESPaGuardar.setSensorCO(lecturaESPdto.getSensorCO());
 	    lecturaESPaGuardar.setSensorHumedad(lecturaESPdto.getSensorHumedad());
