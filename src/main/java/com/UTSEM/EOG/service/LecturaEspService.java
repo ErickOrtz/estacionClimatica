@@ -38,28 +38,6 @@ public class LecturaEspService {
 	    return lecturaESPdto.resumenLectura();
 	}
 	
-	public String MostrarLecturaSinGuardar(@RequestBody LecturaESPdto lecturaESPdto) {
-	    LecturaESP lecturaESPaGuardar = new LecturaESP();
-	    
-	    System.out.println("LugarEstacion recibido: " + lecturaESPdto.getLugarEstacion());
-	    if(lecturaESPdto.getFechaHoraLectura() == null) {
-	        lecturaESPdto.setFechaHoraLectura(LocalDateTime.now());
-	    }
-	  
-	    //lecturaESPaGuardar.setFechaHoraLectura(lecturaESPdto.getFechaHoraLectura());
-	    //lecturaESPaGuardar.setSensorCO(lecturaESPdto.getSensorCO());
-	    //lecturaESPaGuardar.setSensorHumedad(lecturaESPdto.getSensorHumedad());
-	    //lecturaESPaGuardar.setSensorLLuvia(lecturaESPdto.getSensorLLuvia());
-	    //lecturaESPaGuardar.setSensorTemperatura(lecturaESPdto.getSensorTemperatura());
-	    //lecturaESPaGuardar.setLugarEstacion(lecturaESPdto.getLugarEstacion());
-	    
-	    System.out.println(lecturaESPdto.resumenLectura());
-	    
-	    //lecturaEspRrepsitory.save(lecturaESPaGuardar);
-	    return lecturaESPdto.resumenLectura();
-	}
-	
-	
 	public List<LecturaESP> obtenerLecturas(){
 	    return lecturaEspRrepsitory.findAll();
 	}

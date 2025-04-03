@@ -7,7 +7,7 @@ public class LecturaESPdto {
 	Integer sensorLLuvia;
 	Integer sensorCO;
 	Float sensorTemperatura;
-	LocalDateTime fechaHoraLectura;
+	LocalDateTime fechaHoraLectura = LocalDateTime.now();;
 	Float sensorHumedad;
 	String lugarEstacion;
 	
