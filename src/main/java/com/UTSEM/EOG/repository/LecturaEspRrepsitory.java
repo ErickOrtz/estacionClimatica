@@ -6,4 +6,6 @@ import com.UTSEM.EOG.model.LecturaESP;
 
 public interface LecturaEspRrepsitory extends JpaRepository<LecturaESP,Long>{
 
+	LecturaESP findByLugarEstacion(String lugarEstacion);
+	
 }

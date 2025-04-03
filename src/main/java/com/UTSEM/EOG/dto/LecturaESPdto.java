@@ -9,7 +9,7 @@ public class LecturaESPdto {
 	Float sensorTemperatura;
 	LocalDateTime fechaHoraLectura;
 	Float sensorHumedad;
-	String lugarEstacion;
+	String LugarEstacion;
 	
 	public String getLugarEstacion() {
 		return lugarEstacion;
