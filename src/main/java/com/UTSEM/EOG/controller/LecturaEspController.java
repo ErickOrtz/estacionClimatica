@@ -1,16 +1,20 @@
 package com.UTSEM.EOG.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.UTSEM.EOG.dto.LecturaESPdto;
+import com.UTSEM.EOG.model.LecturaESP;
 import com.UTSEM.EOG.service.LecturaEspService;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
 
 @CrossOrigin("*")
 @RestController
@@ -31,6 +35,12 @@ public class LecturaEspController {
 		return lecturaEspService.guardarLectura(lecturaESPdto);
 
 	}
+	
+	@GetMapping("/obtenerLecturas")
+	public List<LecturaESP> obtenerLecturas() {
+		return lecturaEspService.obtenerLecturas();
+	}
+	
 	
 
 }
