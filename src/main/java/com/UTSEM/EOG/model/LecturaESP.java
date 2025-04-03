@@ -27,6 +27,8 @@ public class LecturaESP {
 	@Column
 	Float sensorHumedad;
 	@Column
+	String LugarEstacion;
+	@Column
 	@CreationTimestamp
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
 	private LocalDateTime fechaHoraLectura;
