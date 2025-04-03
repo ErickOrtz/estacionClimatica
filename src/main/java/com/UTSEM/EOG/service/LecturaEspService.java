@@ -18,20 +18,25 @@ public class LecturaEspService {
 	LecturaEspRrepsitory lecturaEspRrepsitory;
 	
 	public String guardarLectura(@RequestBody LecturaESPdto lecturaESPdto) {
-	
-		LecturaESP lecturaESPaGuardar = new LecturaESP();
-		
-		lecturaESPaGuardar.setFechaHoraLectura(lecturaESPdto.getFechaHoraLectura());
-		lecturaESPaGuardar.setSensorCO(lecturaESPdto.getSensorCO());
-		lecturaESPaGuardar.setSensorHumedad(lecturaESPdto.getSensorHumedad());
-		lecturaESPaGuardar.setSensorLLuvia(lecturaESPdto.getSensorLLuvia());
-		lecturaESPaGuardar.setSensorTemperatura(lecturaESPdto.getSensorTemperatura());
-		lecturaESPaGuardar.setLugarEstacion(lecturaESPdto.getLugarEstacion());
-		lecturaESPdto.setFechaHoraLectura(LocalDateTime.now());
-		System.out.println(lecturaESPdto.resumenLectura());
-		
-		lecturaEspRrepsitory.save(lecturaESPaGuardar);
-		return lecturaESPdto.resumenLectura();
+	    LecturaESP lecturaESPaGuardar = new LecturaESP();
+	    
+	    // Establecer la fecha actual solo si no viene en el DTO
+	    if(lecturaESPdto.getFechaHoraLectura() == null) {
+	        lecturaESPdto.setFechaHoraLectura(LocalDateTime.now());
+	    }
+	    
+	    // Copiar todos los campos del DTO a la entidad
+	    lecturaESPaGuardar.setFechaHoraLectura(lecturaESPdto.getFechaHoraLectura());
+	    lecturaESPaGuardar.setSensorCO(lecturaESPdto.getSensorCO());
+	    lecturaESPaGuardar.setSensorHumedad(lecturaESPdto.getSensorHumedad());
+	    lecturaESPaGuardar.setSensorLLuvia(lecturaESPdto.getSensorLLuvia());
+	    lecturaESPaGuardar.setSensorTemperatura(lecturaESPdto.getSensorTemperatura());
+	    lecturaESPaGuardar.setLugarEstacion(lecturaESPdto.getLugarEstacion());
+	    
+	    System.out.println(lecturaESPdto.resumenLectura());
+	    
+	    lecturaEspRrepsitory.save(lecturaESPaGuardar);
+	    return lecturaESPdto.resumenLectura();
 	}
 	
 	
