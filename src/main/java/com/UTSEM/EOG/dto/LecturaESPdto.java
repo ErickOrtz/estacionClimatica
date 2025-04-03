@@ -25,7 +25,7 @@ public class LecturaESPdto {
 				+ "sensorTemperatura: "+this.sensorTemperatura
 				+ "\nsensorHumedad: "+this.sensorHumedad+"\n"
 				+ "fechaHoraLectura: "+this.fechaHoraLectura
-				+"\nLugarEstacion: "+ this.LugarEstacion;
+				+"\nLugar de la Estacion: "+ this.LugarEstacion;
 	}
 	
 	public Float getSensorHumedad() {
