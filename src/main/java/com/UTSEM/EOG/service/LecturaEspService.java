@@ -40,23 +40,22 @@ public class LecturaEspService {
 	}
 	
 	public String actualizar(LecturaESPdto lecturaESP) {
-		
-		Optional<LecturaESP> laLectura = lecturaEspRrepsitory.findById(lecturaESP.getId());
-		
-		if(laLectura.isPresent()) {
-			LecturaESP lectuarActualizr = laLectura.get();
-			lectuarActualizr.setFechaHoraLectura(lecturaESP.getFechaHoraLectura());
-			lectuarActualizr.setSensorCO(lecturaESP.getSensorCO());
-			lectuarActualizr.setSensorHumedad(lecturaESP.getSensorHumedad());
-			lectuarActualizr.setSensorLLuvia(lecturaESP.getSensorLLuvia());
-			lectuarActualizr.setSensorTemperatura(lecturaESP.getSensorTemperatura());
-			
-			lecturaEspRrepsitory.save(lectuarActualizr);
-			
-			return lecturaESP.resumenLectura();
-		}
-		return "Lectura No encontrada";
-		
+	    Optional<LecturaESP> laLectura = lecturaEspRrepsitory.findById(lecturaESP.getId());
+	    
+	    if(laLectura.isPresent()) {
+	        LecturaESP lecturaActualizar = laLectura.get();
+	        lecturaActualizar.setFechaHoraLectura(lecturaESP.getFechaHoraLectura());
+	        lecturaActualizar.setSensorCO(lecturaESP.getSensorCO());
+	        lecturaActualizar.setSensorHumedad(lecturaESP.getSensorHumedad());
+	        lecturaActualizar.setSensorLLuvia(lecturaESP.getSensorLLuvia()); // Asegúrate que coincida
+	        lecturaActualizar.setSensorTemperatura(lecturaESP.getSensorTemperatura());
+	        lecturaActualizar.setLugarEstacion(lecturaESP.getLugarEstacion()); // Añade esta línea
+	        
+	        lecturaEspRrepsitory.save(lecturaActualizar);
+	        
+	        return "Lectura Actualizada: " + lecturaESP.resumenLectura();
+	    }
+	    return "Lectura No encontrada";
 	}
 	
 	public List<LecturaESP> obtenerLecturas(){
