@@ -21,11 +21,10 @@ public class EstacionClimaticaApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*")  // O especifica dominios: "https://tudominio.com"
+                        .allowedOrigins("https://joyful-radiance-production.up.railway.app")  // Solo tu dominio Railway
                         .allowedMethods("GET", "POST", "PUT", "DELETE")
-                        .allowedHeaders("Authorization", "Content-Type")
-                        .exposedHeaders("Custom-Header")  // Si necesitas exponer headers.
-                        .maxAge(3600);  // Tiempo de cache para opciones CORS.
+                        .allowedHeaders("*")
+                        .allowCredentials(true);  // Si usas cookies o auth
             }
         };
     }
